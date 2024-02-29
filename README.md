@@ -39,7 +39,7 @@ Install dependencies:
 To build from source, clone the latest version from this repository into your catkin workspace and compile the package
 using
 
-	cd catkin_workspace/src
+	cd catkin1_ws/src
 	
 	git clone git@github.com/Williamgot1t/hero_chassis_controller.git
   
