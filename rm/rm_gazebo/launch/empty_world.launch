@@ -1,0 +1,19 @@
+<launch>
+    <arg name="robot_type" default="$(env ROBOT_TYPE)" doc="Robot type [standard, auto, hero, engineer,sentry,rmua]"/>
+    <arg name="load_chassis" default="true"/>
+    <arg name="load_gimbal" default="true"/>
+    <arg name="load_shooter" default="true"/>
+    <arg name="load_arm" default="true"/>
+    <arg name="paused" default="false"/>
+    <arg name="roller_type" default="simple" doc="simple or realistic"/>
+    <rosparam file="$(find rm_gazebo)/config/imus.yaml" command="load" if="$(arg load_gimbal)"/>
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="world_name" value="$(find rm_gazebo)/worlds/empty.world"/>
+    </include>
+
+
+          
+  
+
+</launch>
